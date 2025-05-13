@@ -150,14 +150,23 @@ namespace ConsoleApp18
 
         static void Main(string[] args) // main method
         {
-            if (isEmpty(args) || !isValidArgs(args))
+            while (true)
             {
+                Console.WriteLine("welcome to the series of numbers program");
+                Console.WriteLine("please enter a series of numbers");
 
-                Console.WriteLine("enter a series of numbers");
-                string seriesOfNumbers = askForSeries();
-                args = turnsSeriesToLIst(seriesOfNumbers);
+                if (isEmpty(args) || !isValidArgs(args))
+                {
+
+                    Console.WriteLine("please enter a series of numbers");
+                    string seriesOfNumbers = askForSeries();
+                    args = turnsSeriesToLIst(seriesOfNumbers);
+                }
+                else
+                {
+                    break;
+                }
             }
-
 
             do
             {
