@@ -50,14 +50,32 @@ namespace ConsoleApp18
                 Console.WriteLine(str);
             }
         }
-        static string[] displayReverseList(string[] listOfStr)
+        static void displayReverseList(string[] listOfStr)
         {
             for (int i = listOfStr.Length; i >0; i-=1)
             {
                 Console.WriteLine(listOfStr[i]);
 
             }
+            // test
+            static string[] sortListOfNumbers(string[] listOfString)
+            {
+                int[] nums = new int[listOfString.Length];
+                string[] sortedList = new string[listOfString.Length];
+                for (int i = 0; i < listOfString.Length; i++)
+                {
+                    nums[i] = Convert.ToInt32(listOfString[i]);
+                }
+                int[] sortedArray = Array.Sort(nums);
+                for (int i = 0; i < sortedArray.Length; i++)
+                {
+                    sortedList[i] = Convert.ToString(sortedArray[i]);
+                }
+
+                return ;
+            }
         }
+        
             static void Main(string[] args)
             {
                 if (isEmpty(args) || notValidArgs(args)) { 
@@ -78,6 +96,11 @@ namespace ConsoleApp18
                         displayListOfStr(args);
                         break;
                  case "c":
+                    displayReverseList(args);
+                    break;
+                case "d":
+
+
 
 
 
