@@ -24,7 +24,7 @@ namespace ConsoleApp18
                     Count++;
                 }
             }
-            if (count < 3)
+            if (Count < 3)
                 {
                     return true;
                 }
@@ -43,12 +43,21 @@ namespace ConsoleApp18
             {
                 return seriesOfNums.Split(',');
             }
-            static void displayListOfStr(string[] listOfStr) {
-            foreach (string str in listOfStr) 
+        static void displayListOfStr(string[] listOfStr)
+        {
+            foreach (string str in listOfStr)
             {
-                Console.WriteLine(str); 
+                Console.WriteLine(str);
             }
+        }
+        static string[] displayReverseList(string[] listOfStr)
+        {
+            for (int i = listOfStr.Length; i >0; i-=1)
+            {
+                Console.WriteLine(listOfStr[i]);
 
+            }
+        }
             static void Main(string[] args)
             {
                 if (isEmpty(args) || notValidArgs(args)) { 
@@ -68,6 +77,9 @@ namespace ConsoleApp18
                  case "b":
                         displayListOfStr(args);
                         break;
+                 case "c":
+
+
 
 
 
